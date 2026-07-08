@@ -1,0 +1,28 @@
+@use '../../scss/util' as util;
+
+.errorSection{
+    color:util.$primary-color;
+    text-align: center;
+    width:100%;
+    margin: 0 auto;
+    min-height:74vh;
+
+    padding-top:2rem;
+    @media (max-width:util.$breakpoint-mobile){  
+      padding:9rem 0;
+    }
+    h1{
+        font-size: 7em;
+        margin-bottom: 0.4em;
+    }
+    h2{
+        font-size: 1.6rem;
+        font-weight: 500;
+        margin-bottom: 4.5em;
+    }
+    a{
+        display: inline-block;
+        margin-bottom: 6em;
+        text-decoration: underline;
+    }
+}

@@ -1,0 +1,59 @@
+@use '../../scss/util' as util;
+
+.collapsePanel{
+    width:100%;
+    overflow: hidden;
+    margin-bottom: 2rem;
+    &__title{
+        background-color:util.$primary-color;
+        color:util.$secondary-color;
+        @include util.flex-align();
+        justify-content: space-between;
+        font-size:18px;
+        font-weight:500;
+        border-radius: 10px;
+        height:2.6rem;
+        padding-left:20px;
+        @media (max-width:util.$breakpoint-mobile){
+            font-size: 13px;
+            height: 30px;
+            border-radius: 5px;
+        };
+        & button{
+            height: 1.2rem;
+            width: 1.4rem;
+            cursor: pointer;
+            border:none;
+            background-color: transparent;
+            background-size: cover;
+            margin-right: 10px;
+            &.collapsePanel__arrow--up{
+                background-image: url('../../assets/imgs/arrow_up.png');
+            }
+            &.collapsePanel__arrow--down{
+                background-image: url('../../assets/imgs/arrow_down.png');
+            }
+        }
+    }
+    .content{
+        background-color:util.$bg-color-light;
+        color:util.$primary-color;
+        border-radius: 10px;
+        font-size:18px;
+        font-weight:400;
+        line-height:26px;
+        position:relative;
+        z-index: -1;
+        margin-top:-0.3rem;
+        min-height:15rem;
+        padding-left:20px;
+        padding-right:20px;
+        padding-top:20px;
+        animation:slide-down 350ms ease-in-out; 
+        @media (max-width:util.$breakpoint-mobile){
+            font-size: 13px;
+            line-height:17px;
+            height:143px;
+        };
+    }
+}

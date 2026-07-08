@@ -1,0 +1,35 @@
+@use '../../scss/util/' as util;
+.navbar{
+    margin-left: auto;
+    @media (max-width:util.$breakpoint-mobile){
+        height:17px;
+    }
+    & .navbar__tabs{
+        display: flex;
+        gap: 2em;
+        font-size: 1.4em;
+        font-weight: 500;
+        color:util.$primary-color;
+        @media (max-width:util.$breakpoint-mobile){
+            gap: 10px;
+            font-size:0.68em;
+            text-transform: uppercase;
+        }
+        & .navbar__tab--active{
+            isolation: isolate;
+            position:relative;
+            &::after{
+                content:'';
+                height: 0.1em;
+                width:100%;
+                position:absolute;
+                border-radius:10px;
+                background:util.$primary-color;
+                bottom:0px;
+                left:50%;
+                transform:translateX(-50%);
+                transition : all 0.3s ease-in-out;
+            }
+        }
+    }
+}

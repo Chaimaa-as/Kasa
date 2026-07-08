@@ -1,0 +1,54 @@
+@use '../../scss/util/' as util;
+
+.banner{
+    @include util.flex-center;
+    align-items: center;
+    border-radius: 1rem;
+    background-position: center;
+    background-size: cover;
+    height: 223px;
+    padding: 20px;
+    max-width: 85%;
+    margin: 43px auto;
+    inset:0;
+    @include util.banner-styling();
+    &__hero{
+        background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('../../assets/imgs/home_cover.png');
+        @media (max-width:util.$breakpoint-mobile){
+            padding-left:16px;
+            justify-content: flex-start;
+        }
+        & h1{
+            
+            color: util.$secondary-color;
+            font-weight: 500;
+            font-size :2em;;
+            & br{
+                display:none;
+            }
+            @media (max-width:util.$breakpoint-mobile){
+                font-size:24px;
+                & br{
+                    display:initial;
+                }
+            }
+        }
+    }
+    @media (max-width:util.$breakpoint-mobile){
+        margin: 20px auto;
+        height: 120px;
+
+    }
+    &__about{
+        background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('../../assets/imgs/about_cover.png');
+        
+        @media (max-width:util.$breakpoint-mobile){
+            margin: 20px auto;
+            min-height: 255px;
+            & img{
+                min-height: 255px;
+            }
+        }
+    }
+}
+

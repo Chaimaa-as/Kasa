@@ -1,0 +1,27 @@
+@use '../../scss/util/' as util;
+
+footer{
+    height: 12.8rem; 
+    width: 100%; 
+    clear:both;
+    margin-top: -150px;
+    @include util.flexBlock();
+    flex-direction: column;
+    background-color: util.$tertiary-color;
+    padding : 2rem;
+    height : 209px;
+    margin-top:auto;
+    img{
+        margin-bottom: 20px;
+    }
+    p{
+        color : util.$secondary-color;
+        font-weight: 500;
+        font-size:24px;
+        padding: 1rem;
+        @media (max-width:util.$breakpoint-mobile){
+            font-size:12px;
+            
+        }
+    }
+}
