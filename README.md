@@ -22,6 +22,14 @@ Kasa fait partie des leaders de la location d'appartements entre particuliers en
 - SASS / SCSS
 - Node.js (Environnement)
 
+## 🎨 Maquettes du projet (Figma)
+
+Développement Front-End en respectant strictement les maquettes Figma fournies :
+
+|                               Maquette Desktop                               |                               Maquette Mobile                               |
+| :--------------------------------------------------------------------------: | :-------------------------------------------------------------------------: |
+| <img src="./src/assets/D_Home.png" alt="Maquette Desktop Kasa" height="350"> | <img src="./src/assets/M_Home.png" alt="Maquette Mobile Kasa" height="350"> |
+
 ## 🎓 Soutenance du projet
 
 Vous pouvez consulter le support de présentation expliquant mon architecture de composants React, la gestion du routage, et mes choix d'intégration :
